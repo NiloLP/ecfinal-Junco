@@ -77,7 +77,7 @@ const NuevoIntegrantePage = () => {
                 <input type="submit" value="Nuevo Integrante" />
 
             </form>
-            <Link to="/">Volver</Link>
+            <Link to="/" className='btn btn-primary'>Volver</Link>
         </>
     )
 }

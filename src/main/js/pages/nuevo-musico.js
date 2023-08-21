@@ -21,13 +21,13 @@ function PageNuevoMusico() {
     return (
         <>
             <h1>Nuevo Nakama</h1>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className='me-2'>
                 <label htmlFor="nombre">Nombre</label>
                 <input type="text" id="nombre" name="nombre" onChange={(e)=>setNombre(e.target.value)} />
                 <input type="submit" value="Nuevo Músico" />
             </form>
             <hr />
-            <Link to="/">Volver</Link>
+            <Link to="/" className='btn btn-primary'>Volver</Link>
         </>
     );
 }

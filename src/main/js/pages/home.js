@@ -21,29 +21,29 @@ class PageHome extends React.Component {
 	render() {
 		return (
 			<>
-                <h1>One Piece</h1>
+                <h1 className='text-center'>One Piece</h1>
 
-				<div style={{"width": "100%","display": "flex"}} >
+				<div style={{"width": "100%","display": "flex"}} className='container'>
 
 					<div style={{"width": "calc(100%/3)"}}>
 						<Titulo entidad="Pirata" emoji="🐒" />
 						<InstrumentoList piratas={this.state.piratas} />
 						<br />
-						<Link to="/nuevo-instrumento">Nuevo Pirata</Link>
+						<Link to="/nuevo-instrumento" className='btn btn-warning'>Nuevo Pirata</Link>
 					</div>
 
 					<div style={{"width": "calc(100%/3)"}}>
 						<Titulo entidad="Nakama" emoji="⚓" />
 						<MusicoList nakamas={this.state.nakamas} />
 						<br />
-						<Link to="/nuevo-musico">Nuevo Nakama</Link>
+						<Link to="/nuevo-musico" className='btn btn-warning'>Nuevo Nakama</Link>
 					</div>
 
 					<div style={{"width": "calc(100%/3)"}}>
 						<Titulo entidad="Banda" emoji="🏴‍☠️" />
 						<BandaList bandas={this.state.bandas} />
 						<br />
-						<Link to="/nueva-banda">Nueva Banda</Link>
+						<Link to="/nueva-banda" className='btn btn-warning'>Nueva Banda</Link>
 					</div>
 
 				</div>
@@ -133,7 +133,7 @@ class Instrumento extends React.Component {
 				<td>{this.props.pirata.categoria}</td>
 				<td>{this.props.pirata.descripcion}</td>
 				<td>
-					<Link to={'/editar-instrumento/'+id}>Editar</Link>
+					<Link to={'/editar-instrumento/'+id} className='btn btn-primary'>Editar</Link>
 				</td>
 			</tr>
 		)
@@ -146,7 +146,7 @@ class Musico extends React.Component {
 			<tr>
 				<td>{this.props.nakama.nombre}</td>
 				<td>
-					<Link to={`/editar-musico/${id}`}>Editar</Link>
+					<Link to={`/editar-musico/${id}`} className='btn btn-primary'>Editar</Link>
 				</td>
 			</tr>
 		)
@@ -159,7 +159,7 @@ class Banda extends React.Component {
 			<tr>
 				<td>{this.props.banda.nombre}</td>
 				<td>
-					<Link to={`/ver-banda/${id}`}>Ver</Link>
+					<Link to={`/ver-banda/${id}`} className='btn btn-primary'>Ver</Link>
 				</td>
 			</tr>
 		)

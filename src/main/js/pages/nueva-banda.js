@@ -27,7 +27,7 @@ function PageNuevaBanda() {
                 <input type="submit" value="Nueva Banda" />
             </form>
             <hr />
-            <Link to="/">Volver</Link>
+            <Link to="/" className='btn btn-primary'>Volver</Link>
         </>
     );
 }

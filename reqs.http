@@ -1,4 +1,4 @@
-@server = https://scaling-goldfish-rqxp769975v26pg-8080.app.github.dev
+@server = https://solid-space-cod-9rxj65vv9vv2pp6j-8080.app.github.dev
 @piratas = {{server}}/api/piratas
 @nakamas = {{server}}/api/nakamas
 ###

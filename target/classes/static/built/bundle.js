@@ -41123,11 +41123,14 @@ var PageHome = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "One Piece"), /*#__PURE__*/React.createElement("div", {
+      return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", {
+        className: "text-center"
+      }, "One Piece"), /*#__PURE__*/React.createElement("div", {
         style: {
           "width": "100%",
           "display": "flex"
-        }
+        },
+        className: "container"
       }, /*#__PURE__*/React.createElement("div", {
         style: {
           "width": "calc(100%/3)"
@@ -41138,7 +41141,8 @@ var PageHome = /*#__PURE__*/function (_React$Component) {
       }), /*#__PURE__*/React.createElement(InstrumentoList, {
         piratas: this.state.piratas
       }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Link, {
-        to: "/nuevo-instrumento"
+        to: "/nuevo-instrumento",
+        className: "btn btn-warning"
       }, "Nuevo Pirata")), /*#__PURE__*/React.createElement("div", {
         style: {
           "width": "calc(100%/3)"
@@ -41149,7 +41153,8 @@ var PageHome = /*#__PURE__*/function (_React$Component) {
       }), /*#__PURE__*/React.createElement(MusicoList, {
         nakamas: this.state.nakamas
       }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Link, {
-        to: "/nuevo-musico"
+        to: "/nuevo-musico",
+        className: "btn btn-warning"
       }, "Nuevo Nakama")), /*#__PURE__*/React.createElement("div", {
         style: {
           "width": "calc(100%/3)"
@@ -41160,7 +41165,8 @@ var PageHome = /*#__PURE__*/function (_React$Component) {
       }), /*#__PURE__*/React.createElement(BandaList, {
         bandas: this.state.bandas
       }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Link, {
-        to: "/nueva-banda"
+        to: "/nueva-banda",
+        className: "btn btn-warning"
       }, "Nueva Banda"))));
     }
   }]);
@@ -41250,7 +41256,8 @@ var Instrumento = /*#__PURE__*/function (_React$Component5) {
     value: function render() {
       var id = this.props.pirata._links.self.href.split('/').slice(-1);
       return /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", null, this.props.pirata.nombre), /*#__PURE__*/React.createElement("td", null, this.props.pirata.categoria), /*#__PURE__*/React.createElement("td", null, this.props.pirata.descripcion), /*#__PURE__*/React.createElement("td", null, /*#__PURE__*/React.createElement(Link, {
-        to: '/editar-instrumento/' + id
+        to: '/editar-instrumento/' + id,
+        className: "btn btn-primary"
       }, "Editar")));
     }
   }]);
@@ -41268,7 +41275,8 @@ var Musico = /*#__PURE__*/function (_React$Component6) {
     value: function render() {
       var id = this.props.nakama._links.self.href.split("/").slice(-1);
       return /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", null, this.props.nakama.nombre), /*#__PURE__*/React.createElement("td", null, /*#__PURE__*/React.createElement(Link, {
-        to: "/editar-musico/".concat(id)
+        to: "/editar-musico/".concat(id),
+        className: "btn btn-primary"
       }, "Editar")));
     }
   }]);
@@ -41286,7 +41294,8 @@ var Banda = /*#__PURE__*/function (_React$Component7) {
     value: function render() {
       var id = this.props.banda._links.self.href.split("/").slice(-1);
       return /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", null, this.props.banda.nombre), /*#__PURE__*/React.createElement("td", null, /*#__PURE__*/React.createElement(Link, {
-        to: "/ver-banda/".concat(id)
+        to: "/ver-banda/".concat(id),
+        className: "btn btn-primary"
       }, "Ver")));
     }
   }]);
@@ -41350,7 +41359,8 @@ function PageNuevaBanda() {
     type: "submit",
     value: "Nueva Banda"
   })), /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement(Link, {
-    to: "/"
+    to: "/",
+    className: "btn btn-primary"
   }, "Volver"));
 }
 module.exports = PageNuevaBanda;
@@ -41439,7 +41449,8 @@ function PageNuevoInstrumento() {
     type: "submit",
     value: "Nuevo Pirata"
   })), /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement(Link, {
-    to: "/"
+    to: "/",
+    className: "btn btn-primary"
   }, "Volver"));
 }
 module.exports = PageNuevoInstrumento;
@@ -41561,7 +41572,8 @@ var NuevoIntegrantePage = function NuevoIntegrantePage() {
     type: "submit",
     value: "Nuevo Integrante"
   })), /*#__PURE__*/React.createElement(Link, {
-    to: "/"
+    to: "/",
+    className: "btn btn-primary"
   }, "Volver"));
 };
 module.exports = NuevoIntegrantePage;
@@ -41608,7 +41620,8 @@ function PageNuevoMusico() {
     });
   };
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Nuevo Nakama"), /*#__PURE__*/React.createElement("form", {
-    onSubmit: handleSubmit
+    onSubmit: handleSubmit,
+    className: "me-2"
   }, /*#__PURE__*/React.createElement("label", {
     htmlFor: "nombre"
   }, "Nombre"), /*#__PURE__*/React.createElement("input", {
@@ -41622,7 +41635,8 @@ function PageNuevoMusico() {
     type: "submit",
     value: "Nuevo M\xFAsico"
   })), /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement(Link, {
-    to: "/"
+    to: "/",
+    className: "btn btn-primary"
   }, "Volver"));
 }
 module.exports = PageNuevoMusico;
