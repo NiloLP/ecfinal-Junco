@@ -1,0 +1,31 @@
+@server = https://scaling-goldfish-rqxp769975v26pg-8080.app.github.dev
+@piratas = {{server}}/api/piratas
+@nakamas = {{server}}/api/nakamas
+###
+GET {{piratas}}/1
+###
+POST {{piratas}}
+Content-Type: application/json
+
+{
+  "nombre" : "Quena",
+  "categoria" : "Instrumento de viento",
+  "descripcion" : "tubo con orificios que al taparlos hacen sonar diferentes notas"
+}
+###
+GET {{nakamas}}
+###
+GET {{nakamas}}/1
+###
+PATCH {{nakamas}}/1
+Content-Type: application/json
+
+{
+  "nombre" : "Jaime Hendrix"
+}
+###
+GET {{server}}/api/bandas/1
+###
+GET {{server}}/api/integrantes
+###
+GET {{server}}/api/bandas/1/formacion

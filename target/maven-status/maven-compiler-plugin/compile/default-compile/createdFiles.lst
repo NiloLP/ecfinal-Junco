@@ -1,0 +1,11 @@
+com/example/demo/HomeController.class
+com/example/demo/Integrante.class
+com/example/demo/Pirata.class
+com/example/demo/IntegranteRepository.class
+com/example/demo/DatabaseLoader.class
+com/example/demo/DemoApplication.class
+com/example/demo/NakamaRepository.class
+com/example/demo/Banda.class
+com/example/demo/PirataRepository.class
+com/example/demo/BandaRepository.class
+com/example/demo/Nakama.class
